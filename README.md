@@ -1,30 +1,25 @@
-# B 站直播弹幕姬 Python 版
+# B站直播机器人(BilibiliRobot)
 
-Python 抓取 B 站直播弹幕。另外我还写了 [Go 版的直播弹幕](https://github.com/lyyyuna/gobilibili)。
+我之前用树莓派搭建了一个监控我家狗的B站直播，https://live.bilibili.com/21172572　
 
-## 简单说明
-
-B 站弹幕协议是会变的，目前至少改过一次。故不能保证向后兼容性。
+我几年前做过一个微信机器人，接入图灵机器人的API，现在将它接入到Ｂ站直播弹幕中，用来消遣消遣，纯粹玩玩。
 
 ### 依赖
 
-* Python 3.5
+* Python 3.5+
 * pip3 install aiohttp
 
 ### 快速开始
 
-在 config.py 中配置是否显示礼物、欢迎信息。
+在 var_set.py 中配置参数．
 
 在命令行中，
 
-    python3 main.py
-    
-根据提示输入房间号即可。
+```python
+python main.py
+``` 
 
-### 思路简单介绍
+### TODO
 
-[B站弹幕协议简析](http://www.lyyyuna.com/2016/03/14/bilibili-danmu01/)
-
-## 以此为基础做的弹幕收集系统
-
-[Top 100 UP主的24小时弹幕收集器](https://github.com/lyyyuna/bilibili_danmu_colloector)
+ - 图灵机器人的ＡＰＩ免费版，一个机器人只能调用１００次，一共可以添加５个机器人，切换ａｐｐｋｅｙ来实现增加调用次数，即当一个ＡＰＩ次数限制用完以后，自动切换到另外一个ＡＰＩ
+ - 由于摄像头视角比较小，不能完全覆盖到整个狗笼，因此，需要通过图像识别狗的位置，让摄像头自动跟踪狗的位置．使用２个舵机，用Ｓｏｌｉｄｗｏｒｋｓ画一个符合要求的舵机云台．
