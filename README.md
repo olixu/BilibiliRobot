@@ -16,7 +16,7 @@
 在命令行中，
 
 ```python
-python main.py
+python bilibiliClient.py
 ``` 
 
 ### TODO
